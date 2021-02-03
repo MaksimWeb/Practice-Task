@@ -1,0 +1,146 @@
+:root {
+    --text-color: #767676;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 65px;
+    padding-bottom: 68px;
+}
+
+.header__item a{
+    font-size: 40px;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.header__item:last-child {
+    text-align: end;
+}
+
+.header__item:last-child a {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-color);
+    border-bottom: 1px dashed var(--text-color);
+}
+
+.section__nav {
+    background: var(--text-color);
+}
+
+.nav__container {
+    padding: 25px 0 35px 0;
+}
+
+.nav__ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__item {
+    border: 1px solid transparent;
+    border-right: 1px solid #fff;
+    padding-right: 25px;
+}
+
+.nav__item a {
+    font-size: 30px;
+    font-weight: normal;
+    color: #fff;
+}
+
+.nav__item:hover a {
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+/* слайдер */
+
+.slider__container {
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+    margin-top: -50px;
+}
+
+.slider__track {
+    display: flex;
+    transition: .2s;
+}
+
+.slider__item img {
+    width: 100%;
+}
+
+.btn__prev,
+.btn__next {
+    position: absolute;
+    top: 110%;
+    border: none;
+    background: var(--text-color);
+    width: 35px;
+    height: 60px;
+}
+
+.btn__prev {
+    left: 11%;
+}
+
+.btn__next {
+    right: 11%;
+}
+
+.btn__prev::before,
+.btn__next::before {
+    content: '';
+    display: block;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+    width: 15px;
+    height: 15px;
+    margin: 0 auto;
+}
+
+.btn__prev::before {
+    transform: rotate(45deg);
+}
+
+.btn__next::before {
+    transform: rotate(-135deg);
+}
+
+.btn__prev:hover, .btn__next:hover {
+    cursor: pointer;
+}
+
