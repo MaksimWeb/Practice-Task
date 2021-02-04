@@ -40,3 +40,38 @@ const checkBtns = () => {
 };
 
 checkBtns();
+
+const catalogItem = [...document.querySelectorAll('.catalog__item')];
+const submenu = [...document.querySelectorAll('.submenu')];
+const navPath = document.querySelector('.catalog__nav-link');
+const submenuLink = [...document.querySelectorAll('.submenu__link')];
+const submenuItem = [...document.querySelectorAll('.submenu__item')];
+navPath.textContent = 'Главная / Каталог /'
+
+catalogItem.forEach(item => {
+    item.onclick = () => {
+
+        for (let i of submenu) {
+            if (i.classList.contains('submenu_active')) {
+                i.classList.remove('submenu_active');
+                i.style.borderTop = 'none';
+            } else if (catalogItem.indexOf(item) == submenu.indexOf(i)) {
+                i.classList.add('submenu_active');
+                i.style.borderTop = '1px solid grey';
+            }
+
+        }
+    }
+});
+
+submenuItem.forEach(el => {
+    el.onclick = () => {
+        for (let i of submenuLink) {
+            if (submenuItem.indexOf(el) == submenuLink.indexOf(i)) {
+                navPath.textContent = `Главная / Каталог / ${i.textContent}`
+            }
+        }
+    }
+
+})
+
