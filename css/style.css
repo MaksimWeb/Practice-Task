@@ -222,8 +222,6 @@ a {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    row-gap: 20px;
-    column-gap: 15px;
     padding: 0;
     margin-bottom: 32px;
 }
@@ -232,6 +230,11 @@ a {
     max-width: 250px;
     background: grey;
     padding: 20px 20px 0 20px;
+    margin-bottom: 20px;
+}
+
+.catalog__photo:not(:last-child) {
+    margin-right: 15px;
 }
 
 .catalog__photo img {
@@ -256,8 +259,11 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    column-gap: 10px;
     margin: 0 0 67px 0;
+}
+
+.pagination:not(:last-child) {
+    margin-right: 10px;
 }
 
 .catalog__text-block {
