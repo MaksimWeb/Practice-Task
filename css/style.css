@@ -64,7 +64,7 @@ a {
     justify-content: space-evenly;
 }
 
-.nav__item {
+.nav__item:not(:last-child) {
     border: 1px solid transparent;
     border-right: 1px solid #fff;
     padding-right: 25px;
@@ -315,7 +315,9 @@ footer {
 }
 
 .footer__item a {
-text-decoration: underline solid #ababab;
+    text-decoration: underline;
+    text-decoration-color: #ababab;
+
 }
 
 .footer__item:not(:last-child) {
@@ -333,5 +335,6 @@ text-decoration: underline solid #ababab;
 }
 
 .footer__link a {
-text-decoration: underline solid #ababab;
+    text-decoration: underline;
+    text-decoration-color: #ababab;
 }

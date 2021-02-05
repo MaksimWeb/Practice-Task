@@ -2,12 +2,13 @@ let position = 0;
 const slidesToShow = 1;
 const slidesToScroll = 1;
 const container = document.querySelector('.slider__container');
+let windowCalcWidth = window.getComputedStyle(container)
 const track = document.querySelector('.slider__track');
 const btnPrev = document.querySelector('.btn__prev');
 const btnNext = document.querySelector('.btn__next');
 const items = document.querySelectorAll('.slider__item');
 const itemsCount = items.length;
-const itemWidth = container.clientWidth / slidesToShow;
+const itemWidth = windowCalcWidth.width.replace(/\D/g,'');
 const movePosition = slidesToScroll * itemWidth;
 
 items.forEach((item) => {
