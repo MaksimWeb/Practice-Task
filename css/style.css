@@ -61,7 +61,7 @@ a {
 .nav__ul {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .nav__item {
@@ -82,6 +82,7 @@ a {
 }
 
 .wrapper {
+    position: relative;
     max-width: 1248px;
     margin: 0 auto;
 }
@@ -89,6 +90,7 @@ a {
 /* слайдер */
 .slider__container {
     overflow: hidden;
+    max-width: 1248px;
     position: relative;
     z-index: -1;
     margin-top: -50px;
@@ -106,7 +108,7 @@ a {
 .btn__prev,
 .btn__next {
     position: absolute;
-    top: 90%;
+    top: 47%;
     border: none;
     background: var(--text-color);
     width: 35px;
@@ -114,11 +116,11 @@ a {
 }
 
 .btn__prev {
-    left: 23%;
+    left: 10%;
 }
 
 .btn__next {
-    right: 23%;
+    right: 13%;
 }
 
 .btn__prev::before,
@@ -260,7 +262,7 @@ a {
 
 .catalog__text-block {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     border-top: 1px solid var(--text-color);
 }
