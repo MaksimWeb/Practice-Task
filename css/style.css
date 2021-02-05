@@ -90,7 +90,7 @@ a {
 /* слайдер */
 .slider__container {
     overflow: hidden;
-    max-width: 1248px;
+    width: 100%;
     position: relative;
     z-index: -1;
     margin-top: -50px;
